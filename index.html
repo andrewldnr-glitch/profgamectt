@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="ПрофМаршрут — русскоязычное веб-приложение с профориентационными играми для школьников 13–17 лет и педагогов ЦТТ Адмиралтейского района Санкт-Петербурга."
+    />
+    <meta name="theme-color" content="#245bdb" />
+    <title>ПрофМаршрут — профориентационные игры</title>
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <a class="brand" href="#/">
+          <span class="brand__eyebrow">ЦТТ Адмиралтейского района Санкт-Петербурга</span>
+          <span class="brand__title">ПрофМаршрут</span>
+        </a>
+
+        <div class="topbar__actions">
+          <button
+            class="button button--ghost"
+            type="button"
+            data-action="teacher:toggle-projector"
+            data-projector-toggle-label
+          >
+            Режим проектора
+          </button>
+          <a class="button button--secondary" href="#/teacher">Режим учителя</a>
+        </div>
+      </header>
+
+      <main id="app-view" class="page-view" aria-live="polite">
+        <section class="loading-screen">
+          <div class="loading-screen__card card">
+            <p class="eyebrow">ПрофМаршрут</p>
+            <h1>Загружаем игры и материалы…</h1>
+            <p>Подготавливаем профориентационный сценарий для занятия.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div id="modal-root"></div>
+
+    <noscript>
+      <div class="noscript-warning">
+        Для работы приложения нужен JavaScript: именно он загружает игровые модули и режим учителя.
+      </div>
+    </noscript>
+
+    <script src="components/modal.js" defer></script>
+    <script src="components/game-card.js" defer></script>
+    <script src="components/timer.js" defer></script>
+    <script src="components/scoreboard.js" defer></script>
+    <script src="scripts/storage.js" defer></script>
+    <script src="scripts/local-data.js" defer></script>
+    <script src="scripts/data-loader.js" defer></script>
+    <script src="scripts/router.js" defer></script>
+    <script src="scripts/ui.js" defer></script>
+    <script src="scripts/teacher-mode.js" defer></script>
+    <script src="games/guess-profession.js" defer></script>
+    <script src="games/myth-or-truth.js" defer></script>
+    <script src="games/skill-match.js" defer></script>
+    <script src="games/career-wheel.js" defer></script>
+    <script src="games/future-careers.js" defer></script>
+    <script src="scripts/app.js" defer></script>
+  </body>
+</html>
